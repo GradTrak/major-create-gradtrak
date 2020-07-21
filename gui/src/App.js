@@ -26,11 +26,8 @@ function App() {
           <Form.Label>Type:</Form.Label>
           <Form.Control as="select">
             <option>major</option>
-            <option>course</option>
-            <option>multi</option>
-            <option>unit</option>
-            <option>poly</option>
-            <option>tag</option>
+            <option>minor</option>
+            <option>other</option>
           </Form.Control>
         </Form.Group>
       </Form>
