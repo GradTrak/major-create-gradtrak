@@ -1,42 +1,31 @@
 import React, { Component } from 'react';
 import { Form } from 'react-bootstrap';
-import RequirementCategory from './RequirementCategory'
+import RequirementCategoriesArray from './RequirementCategoriesArray'
 //https://www.sicara.ai/blog/2018-06-27-custom-nested-validated-forms-with-react please just copy this code
 class RequirementSet extends React.Component {
   constructor(props) {
     super(props);
-    this.updateId = this.updateId.bind(this);
+    this.handleFieldChange = this.handleFieldChange.bind(this);
+    this.state = {
+      data: {
+        id: '',
+        name: '',
+        parentId: '',
+        type: 'major',
+        requirementCategories: [{name:'reqCatName', requirements: []}]
+      }
+    };
   }
-  state = {
-    id: '',
-    name: '',
-    parentId: '',
-    type: 'major',
-    RequirementCategories: []
-  };
-  updateId = (newId) => {
-    this.setState({
-      ...this.state,
-      id: newId.target.value,
-    })
+  handleFieldChange = (field) => (event) => {
+    let data = { ...this.state.data };
+    data[field] = event.target.value;
+    console.log(field, event.target.value);
+    this.setState({ data });
   }
-  updateName = (newName) => {
-    this.setState({
-      ...this.state,
-      name: newName.target.value,
-    })
-  }
-  updateParentId = (newId) => {
-    this.setState({
-      ...this.state,
-      parentId: newId.target.value,
-    })
-  }
-  updateType = (newType) => {
-    this.setState({
-      ...this.state,
-      type: newType.target.value,
-    })
+  changeReqCategories = (event) => {
+    let data = { ...this.state.data };
+    data['requirementCategories'] = event.target.value;
+    this.setState({ data });
   }
   render() {
     return (
@@ -46,8 +35,8 @@ class RequirementSet extends React.Component {
           <input
             name="id"
             type="text"
-            value={this.state.id}
-            onChange={this.updateId}
+            value={this.state.data.id}
+            onChange={this.handleFieldChange('id')}
           />
         </div>
         <div>
@@ -55,8 +44,8 @@ class RequirementSet extends React.Component {
           <input
             name="name"
             type="text"
-            value={this.state.name}
-            onChange={this.updateName}
+            value={this.state.data.name}
+            onChange={this.handleFieldChange('name')}
           />
         </div>
         <div>
@@ -64,24 +53,26 @@ class RequirementSet extends React.Component {
           <input
             name="parentId"
             type="text"
-            value={this.state.parentId}
-            onChange={this.updateParentId}
+            value={this.state.data.parentId}
+            onChange={this.handleFieldChange('parentId')}
           />
         </div>
         <div>
           <label for="type">type: </label>
           <select
             name="type"
-            value={this.state.type}
-            onChange={this.updateType}
+            value={this.state.data.type}
+            onChange={this.handleFieldChange('type')}
           >
           <option value="major">major</option>
           <option value="minor">minor</option>
           <option value="other">other</option>
           </select>
         </div>
-
-
+        <RequirementCategoriesArray
+          value={this.state.data.requirementCategories}
+          onChange={this.changeReqCategories}
+        />
       </form>
   );
   }
