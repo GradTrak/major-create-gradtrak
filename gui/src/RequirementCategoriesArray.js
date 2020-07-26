@@ -15,12 +15,23 @@ class RequirementCategoriesArray extends React.Component {
     return (
       this.props.value.map((reqCategory, index) => {
         return <RequirementCategory
-          key={reqCategory.name}
+          key={reqCategory}
           value= {reqCategory}
           onChange={this.handleFieldChange(index)}
         />
       })
   );
+  /*
+  return (
+    this.props.value.map((reqCategory, index) => {
+      return <RequirementCategory
+        key={reqCategory.name}
+        value= {reqCategory}
+        onChange={this.handleFieldChange(index)}
+      />
+    })
+);
+  */
   }
 }
 
