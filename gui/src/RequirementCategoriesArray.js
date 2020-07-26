@@ -17,18 +17,29 @@ class RequirementCategoriesArray extends React.Component {
     let data = [...this.props.value, {name:'', requirements: []}];
     this.props.onChange({target:{value:data}});
   }
+  delReqCategory = index => (e) => {
+    e.preventDefault();
+    let data = [...this.props.value];
+    data.splice(index, 1);
+    this.props.onChange({target:{value:data}});
+  }
   render() {
     return (
       <div>
         <button
           onClick={this.addReqCategory}>Add a requirement Category</button>
-        {this.props.value.map((reqCategory, index) => {
-          return <RequirementCategory
-            key={index}
-            value= {reqCategory}
-            onChange={this.handleFieldChange(index)}
-          />
-        })}
+          {this.props.value.map((req, index) => {
+            return (<div>
+              <button
+                onClick={this.delReqCategory(index)}>Delete this requirement Category</button>
+              <RequirementCategory
+              key={index}
+              value= {req}
+              onChange={this.handleFieldChange(index)}
+            />
+              </div>
+          )
+          })}
       </div>
     );
   }
