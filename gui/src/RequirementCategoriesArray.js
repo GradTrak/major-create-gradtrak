@@ -5,22 +5,32 @@ class RequirementCategoriesArray extends React.Component {
   constructor(props) {
     super(props);
     this.handleFieldChange = this.handleFieldChange.bind(this);
+    this.addReqCategory = this.addReqCategory.bind(this);
   }
   handleFieldChange = (index) => (event) => {
     let data = [...this.props.value];
     data[index] = event.target.value;
     this.props.onChange({target:{value:data}});
   }
+  addReqCategory = (e)=> {
+    e.preventDefault();
+    let data = [...this.props.value, {name:'', requirements: []}];
+    this.props.onChange({target:{value:data}});
+  }
   render() {
     return (
-      this.props.value.map((reqCategory, index) => {
-        return <RequirementCategory
-          key={index}
-          value= {reqCategory}
-          onChange={this.handleFieldChange(index)}
-        />
-      })
-  );
+      <div>
+        <button
+          onClick={this.addReqCategory}>Add a requirement Category</button>
+        {this.props.value.map((reqCategory, index) => {
+          return <RequirementCategory
+            key={index}
+            value= {reqCategory}
+            onChange={this.handleFieldChange(index)}
+          />
+        })}
+      </div>
+    );
   }
 }
 

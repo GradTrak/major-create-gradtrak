@@ -11,15 +11,24 @@ class RequirementsArray extends React.Component {
     data[index] = event.target.value;
     this.props.onChange({target:{value:data}});
   }
+  addReq = (e)=> {
+    e.preventDefault();
+    let data = [...this.props.value, {name:'', type: ''}];
+    this.props.onChange({target:{value:data}});
+  }
   render() {
     return (
-      this.props.value.map((req, index) => {
-        return <Requirement
-          key={index}
-          value= {req}
-          onChange={this.handleFieldChange(index)}
-        />
-      })
+      <div>
+        <button
+          onClick={this.addReq}>Add a requirement</button>
+        {this.props.value.map((req, index) => {
+          return <Requirement
+            key={index}
+            value= {req}
+            onChange={this.handleFieldChange(index)}
+          />
+        })}
+      </div>
   );
   }
 }
