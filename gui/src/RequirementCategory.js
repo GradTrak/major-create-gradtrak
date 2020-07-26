@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Form } from 'react-bootstrap';
+import RequirementsArray from './RequirementsArray';
 class RequirementCategory extends React.Component {
   constructor(props) {
     super(props);
@@ -13,12 +14,16 @@ class RequirementCategory extends React.Component {
   render() {
     return (
       <div>
-        <label for="name">name: </label>
+        <label for="name">Requirement Category Name: </label>
         <input
           name="name"
           type="text"
           value={this.props.value.name}
           onChange={this.handleFieldChange('name')}
+        />
+        <RequirementsArray
+          value={this.props.value.requirements}
+          onChange={this.handleFieldChange('requirements')}
         />
       </div>
   );

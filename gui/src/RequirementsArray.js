@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import RequirementCategory from './RequirementCategory'
+import Requirement from './Requirement'
 //https://www.sicara.ai/blog/2018-06-27-custom-nested-validated-forms-with-react please just copy this code
-class RequirementCategoriesArray extends React.Component {
+class RequirementsArray extends React.Component {
   constructor(props) {
     super(props);
     this.handleFieldChange = this.handleFieldChange.bind(this);
@@ -13,10 +13,10 @@ class RequirementCategoriesArray extends React.Component {
   }
   render() {
     return (
-      this.props.value.map((reqCategory, index) => {
-        return <RequirementCategory
+      this.props.value.map((req, index) => {
+        return <Requirement
           key={index}
-          value= {reqCategory}
+          value= {req}
           onChange={this.handleFieldChange(index)}
         />
       })
@@ -24,4 +24,4 @@ class RequirementCategoriesArray extends React.Component {
   }
 }
 
-export default RequirementCategoriesArray;
+export default RequirementsArray;
