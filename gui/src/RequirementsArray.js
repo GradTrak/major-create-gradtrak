@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Requirement from './Requirement'
+import Requirement from './Requirement';
+import CourseRequirement from './CourseRequirement';
 //https://www.sicara.ai/blog/2018-06-27-custom-nested-validated-forms-with-react please just copy this code
 class RequirementsArray extends React.Component {
   constructor(props) {
@@ -13,7 +14,7 @@ class RequirementsArray extends React.Component {
   }
   addReq = (e)=> {
     e.preventDefault();
-    let data = [...this.props.value, {name:'', type: ''}];
+    let data = [...this.props.value, {name:'', type: 'course'}];
     this.props.onChange({target:{value:data}});
   }
   delReq = index => (e) => {
@@ -31,7 +32,7 @@ class RequirementsArray extends React.Component {
           let requirementComponent;
           switch (req.type) {
             case 'course':
-              requirementComponent = <Requirement
+              requirementComponent = <CourseRequirement
               value= {req}
               onChange={this.handleFieldChange(index)}
             />
