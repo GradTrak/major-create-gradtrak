@@ -29,11 +29,10 @@ class RequirementCategoriesArray extends React.Component {
         <button
           onClick={this.addReqCategory}>Add a requirement Category</button>
           {this.props.value.map((req, index) => {
-            return (<div>
+            return (<div key={index}>
               <button
                 onClick={this.delReqCategory(index)}>Delete this requirement Category</button>
               <RequirementCategory
-              key={index}
               value= {req}
               onChange={this.handleFieldChange(index)}
             />
