@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-class CourseRequirement extends React.Component {
+class TagRequirement extends React.Component {
   constructor(props) {
     super(props);
     this.handleFieldChange = this.handleFieldChange.bind(this);
@@ -12,10 +12,10 @@ class CourseRequirement extends React.Component {
   getProp = (field) => {
     return this.props.value[field] ||
     {
-      type: 'course',
+      type: 'tag',
       name: '',
       id: '',
-      courseId: ''
+      tag: ''
     }[field]
   }
   render() {
@@ -48,16 +48,16 @@ class CourseRequirement extends React.Component {
           value={this.getProp('id')}
           onChange={this.handleFieldChange('id')}
         />
-        <label for="courseId">courseId: </label>
+        <label for="tagId">Tag Id: </label>
         <input
-          name="courseId"
+          name="tagId"
           type="text"
-          value={this.getProp('courseId')}
-          onChange={this.handleFieldChange('courseId')}
+          value={this.getProp('tagId')}
+          onChange={this.handleFieldChange('tagId')}
         />
       </div>
   );
   }
 }
 
-export default CourseRequirement;
+export default TagRequirement;
