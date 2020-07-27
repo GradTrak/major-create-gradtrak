@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Form } from 'react-bootstrap';
-import RequirementCategoriesArray from './RequirementCategoriesArray'
+import RequirementCategoriesArray from './RequirementCategoriesArray';
+import ResultDisplay from './ResultDisplay';
 //https://www.sicara.ai/blog/2018-06-27-custom-nested-validated-forms-with-react please just copy this code
 class RequirementSet extends React.Component {
   constructor(props) {
@@ -13,7 +14,7 @@ class RequirementSet extends React.Component {
         parentId: '',
         type: 'major',
         requirementCategories: [{name:'reqCatName', requirements: []}]
-      }
+      },
     };
   }
   handleFieldChange = (field) => (event) => {
@@ -27,7 +28,15 @@ class RequirementSet extends React.Component {
     data['requirementCategories'] = event.target.value;
     this.setState({ data });
   }
+  showResult = (e)=> {
+    e.preventDefault();
+    let newState = {...this.state};
+    newState.outputData = newState.data;
+    this.setState(newState)
+  }
   render() {
+    const resultComponent = this.state.resultComponent
+    console.log(resultComponent);
     return (
       <form>
         <div>
@@ -73,6 +82,8 @@ class RequirementSet extends React.Component {
           value={this.state.data.requirementCategories}
           onChange={this.changeReqCategories}
         />
+        <button onClick={this.showResult}>Done</button>
+        <ResultDisplay output={this.state.outputData}/>
       </form>
   );
   }
