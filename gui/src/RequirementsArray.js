@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import Requirement from './Requirement';
 import CourseRequirement from './CourseRequirement';
 import TagRequirement from './TagRequirement';
-import MultiRequirement from './MultiRequirement'
+import MultiRequirement from './MultiRequirement';
+import PolyRequirement from './PolyRequirement';
 //https://www.sicara.ai/blog/2018-06-27-custom-nested-validated-forms-with-react please just copy this code
 class RequirementsArray extends React.Component {
   constructor(props) {
@@ -46,7 +47,7 @@ class RequirementsArray extends React.Component {
             />
               break;
             case 'poly':
-              requirementComponent = <Requirement
+              requirementComponent = <PolyRequirement
               value= {req}
               onChange={this.handleFieldChange(index)}
             />

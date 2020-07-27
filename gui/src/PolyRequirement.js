@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Form } from 'react-bootstrap';
 import RequirementsArray from './RequirementsArray';
-class MultiRequirement extends React.Component {
+class PolyRequirement extends React.Component {
   constructor(props) {
     super(props);
     this.handleFieldChange = this.handleFieldChange.bind(this);
@@ -77,4 +77,4 @@ class MultiRequirement extends React.Component {
   }
 }
 
-export default MultiRequirement;
+export default PolyRequirement;
