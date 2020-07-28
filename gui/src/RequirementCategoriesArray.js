@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Col, Row } from 'react-bootstrap';
 import RequirementCategory from './RequirementCategory'
 //https://www.sicara.ai/blog/2018-06-27-custom-nested-validated-forms-with-react please just copy this code
 class RequirementCategoriesArray extends React.Component {
@@ -29,13 +30,18 @@ class RequirementCategoriesArray extends React.Component {
         <button
           onClick={this.addReqCategory}>Add a requirement Category</button>
           {this.props.value.map((req, index) => {
-            return (<div key={index}>
-              <button
-                onClick={this.delReqCategory(index)}>Delete this requirement Category</button>
-              <RequirementCategory
-              value= {req}
-              onChange={this.handleFieldChange(index)}
-            />
+            return (
+              <div key={index}>
+              <Row>
+                <Col>
+                  <button
+                    onClick={this.delReqCategory(index)}>Delete this requirement Category</button>
+                  <RequirementCategory
+                  value= {req}
+                  onChange={this.handleFieldChange(index)}
+                  />
+                </Col>
+              </Row>
               </div>
           )
           })}
