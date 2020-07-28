@@ -14,10 +14,10 @@ class PolyRequirement extends React.Component {
   getProp = (field) => {
     return this.props.value[field] ||
     {
-      type: 'multi',
+      type: 'poly',
       name: '',
       id: '',
-      numRequired: 0,
+      numRequired: 1,
       requirements: [],
       hidden: false
     }[field]
@@ -39,7 +39,7 @@ class PolyRequirement extends React.Component {
           <option value="tag">tag</option>
           </select>
         </div>
-        <label for="name">MultiRequirement Name: </label>
+        <label for="name">PolyRequirement Name: </label>
         <input
           name="name"
           type="text"
@@ -53,19 +53,13 @@ class PolyRequirement extends React.Component {
           value={this.getProp('id')}
           onChange={this.handleFieldChange('id')}
         />
-        <label for="numRequired">numRequired: </label>
-        <input
-          name="numRequired"
-          type="number"
-          value={this.getProp('numRequired')}
-          onChange={this.handleFieldChange('numRequired')}
-        />
         <label for="hidden">Hidden: </label>
         <input
           name="hidden"
           type="checkbox"
           value={this.getProp('hidden')}
           onChange={this.handleFieldChange('hidden')}
+          checked
         />
         <label for="Requirements">Requirements: </label>
         <RequirementsArray
