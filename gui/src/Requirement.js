@@ -4,6 +4,7 @@ import CourseRequirement from './CourseRequirement';
 import TagRequirement from './TagRequirement';
 import MultiRequirement from './MultiRequirement';
 import PolyRequirement from './PolyRequirement';
+import 'Requirement.css';
 class Requirement extends React.Component {
   constructor(props) {
     super(props);
@@ -60,7 +61,7 @@ class Requirement extends React.Component {
         />
     };
     return (
-      <div>
+      <div className="block-example">
         <div>
           <label for="type">type: </label>
           <select

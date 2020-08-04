@@ -4,6 +4,7 @@ import CourseRequirement from './CourseRequirement';
 import TagRequirement from './TagRequirement';
 import MultiRequirement from './MultiRequirement';
 import PolyRequirement from './PolyRequirement';
+import './Requirement.css';
 //https://www.sicara.ai/blog/2018-06-27-custom-nested-validated-forms-with-react please just copy this code
 class RequirementsArray extends React.Component {
   constructor(props) {
