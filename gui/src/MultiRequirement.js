@@ -26,33 +26,6 @@ class MultiRequirement extends React.Component {
     console.log(this.props);
     return (
       <div>
-        <div>
-          <label for="type">type: </label>
-          <select
-            name="type"
-            value={this.getProp('type')}
-            onChange={this.handleFieldChange('type')}
-          >
-          <option value="course">course</option>
-          <option value="multi">multi</option>
-          <option value="poly">poly</option>
-          <option value="tag">tag</option>
-          </select>
-        </div>
-        <label for="name">MultiRequirement Name: </label>
-        <input
-          name="name"
-          type="text"
-          value={this.getProp('name')}
-          onChange={this.handleFieldChange('name')}
-        />
-        <label for="id">Requirement ID: </label>
-        <input
-          name="id"
-          type="text"
-          value={this.getProp('id')}
-          onChange={this.handleFieldChange('id')}
-        />
         <label for="numRequired">numRequired: </label>
         <input
           name="numRequired"
