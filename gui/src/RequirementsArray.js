@@ -28,6 +28,7 @@ class RequirementsArray extends React.Component {
     this.props.onChange({target:{value:data}});
   }
   render() {
+    console.log(this.props.parent);
     return (
       <div>
         <button onClick={this.addReq}>Add a requirement</button>

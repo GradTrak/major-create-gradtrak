@@ -90,7 +90,7 @@ class RequirementSet extends React.Component {
             <RequirementCategoriesArray
               value={this.state.data.requirementCategories}
               onChange={this.changeReqCategories}
-              parent={this.state.data.name}
+              parent={[this.state.data.name]}
             />
             <button onClick={this.showResult}>Done</button>
             <ResultDisplay output={this.state.outputData}/>
