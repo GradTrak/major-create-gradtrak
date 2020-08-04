@@ -29,8 +29,7 @@ class RequirementsArray extends React.Component {
   render() {
     return (
       <div>
-        <button
-          onClick={this.addReq}>Add a requirement</button>
+        <button onClick={this.addReq}>Add a requirement</button>
         {this.props.value.map((req, index) => {
           return (<div key={index}>
             <Requirement value={req} onChange={this.handleFieldChange(index)}/>
@@ -39,6 +38,7 @@ class RequirementsArray extends React.Component {
             </div>
         )
         })}
+        <button onClick={this.addReq}>Add a requirement</button>
       </div>
   );
   }

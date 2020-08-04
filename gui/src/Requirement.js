@@ -12,10 +12,12 @@ class Requirement extends React.Component {
   handleFieldChange = (field) => (event) => {
     let data = {...this.props.value};
     data[field] = event.target.value;
+        console.log(data);
     this.props.onChange({target:{value: data}});
   }
   updateRequirement = (event) => {
     let data = {...event.target.value};
+    console.log(data);
     this.props.onChange({target:{value: data}})
   }
   getProp = (field) => {

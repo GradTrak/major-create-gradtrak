@@ -36,7 +36,6 @@ class RequirementSet extends React.Component {
   }
   render() {
     const resultComponent = this.state.resultComponent
-    console.log(resultComponent);
     return (
       <Form>
         <Row>
