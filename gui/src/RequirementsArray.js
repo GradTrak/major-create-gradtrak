@@ -37,12 +37,12 @@ class RequirementsArray extends React.Component {
           return (
             <span key={index}>
               <Requirement value={req} onChange={this.handleFieldChange(index)} parent={this.props.parent}/>
-              <button onClick={this.delReq(index)}>Delete req</button>
+              <button onClick={this.delReq(index)}>Delete req {req.name}</button>
+              <br/>
             </span>
         )
         })}
         </div>
-        <button onClick={this.addReq}>Add Req</button>
       </span>
   );
   }

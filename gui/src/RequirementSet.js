@@ -13,7 +13,7 @@ class RequirementSet extends React.Component {
         name: 'reqSetName',
         parentId: '',
         type: 'major',
-        requirementCategories: [{name:'reqCatName', requirements: [{type:'course'}]}]
+        requirementCategories: [{name:'reqCatName', requirements: [{type:'multi'}]}]
       },
     };
   }
