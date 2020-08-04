@@ -43,6 +43,7 @@ class Requirement extends React.Component {
         requirementComponent = <MultiRequirement
         value= {req}
         onChange={this.updateRequirement}
+        parent= {[...this.props.parent, this.getProp('name')]}
       />
         break;
       case 'poly':
@@ -66,6 +67,7 @@ class Requirement extends React.Component {
     return (
       <div className="block-example">
         <div>
+        <p className="breadcrumb">{this.props.parent.map((thingy) => (thingy+" - > "))}</p>
           <label for="type">type: </label>
           <select
             name="type"

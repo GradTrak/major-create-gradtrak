@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import RequirementCategory from './RequirementCategory'
+import './Requirement.css';
 //https://www.sicara.ai/blog/2018-06-27-custom-nested-validated-forms-with-react please just copy this code
 class RequirementCategoriesArray extends React.Component {
   constructor(props) {

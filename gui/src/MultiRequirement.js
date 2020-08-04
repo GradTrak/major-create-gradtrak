@@ -44,6 +44,7 @@ class MultiRequirement extends React.Component {
         <RequirementsArray
           value={this.getProp('requirements')}
           onChange={this.handleFieldChange('requirements')}
+          parent={this.props.parent}
         />
       </div>
   );
