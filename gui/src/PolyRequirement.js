@@ -14,6 +14,9 @@ class PolyRequirement extends React.Component {
     }
     let data = {...this.props.value};
     data[field] = event.target.value;
+    if (field === "numRequired") {
+        data[field] = Number(event.target.value)
+    }
     this.props.onChange({target:{value: data}});
   }
   getProp = (field) => {
