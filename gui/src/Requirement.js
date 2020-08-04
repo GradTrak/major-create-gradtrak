@@ -4,7 +4,8 @@ import CourseRequirement from './CourseRequirement';
 import TagRequirement from './TagRequirement';
 import MultiRequirement from './MultiRequirement';
 import PolyRequirement from './PolyRequirement';
-import 'Requirement.css';
+import './Requirement.css';
+
 class Requirement extends React.Component {
   constructor(props) {
     super(props);
