@@ -7,6 +7,9 @@ class TagRequirement extends React.Component {
   handleFieldChange = (field) => (event) => {
     let data = {...this.props.value};
     data[field] = event.target.value;
+    if (field === 'tagId') {
+      data.id = data[field];
+    }
     this.props.onChange({target:{value: data}});
   }
   getProp = (field) => {
@@ -15,7 +18,7 @@ class TagRequirement extends React.Component {
       type: 'tag',
       name: '',
       id: '',
-      tag: ''
+      tagId: ''
     }[field]
   }
   render() {
