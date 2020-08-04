@@ -25,7 +25,7 @@ class PolyRequirement extends React.Component {
   render() {
     console.log(this.props);
     return (
-      <div>
+      <span>
         <label for="hidden">Hidden: </label>
         <input
           name="hidden"
@@ -39,7 +39,7 @@ class PolyRequirement extends React.Component {
           value={this.getProp('requirements')}
           onChange={this.handleFieldChange('requirements')}
         />
-      </div>
+      </span>
   );
   }
 }

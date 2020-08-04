@@ -68,7 +68,7 @@ class Requirement extends React.Component {
         />
     };
     return (
-      <div className="block-example">
+      <span className="block-example">
         <span>
         <span className="breadcrumb">{this.props.parent.map((thingy) => (thingy.substring(0,5) + "/"))}</span>
           <label for="type">type: </label>
@@ -91,7 +91,7 @@ class Requirement extends React.Component {
           />
           {requirementComponent}
           </span>
-        </div>
+        </span>
       )
   }
 }

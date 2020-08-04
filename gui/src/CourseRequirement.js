@@ -22,7 +22,7 @@ class CourseRequirement extends React.Component {
   }
   render() {
     return (
-      <div>
+      <span>
         <label for="courseId">courseId: </label>
         <input
           name="courseId"
@@ -30,7 +30,7 @@ class CourseRequirement extends React.Component {
           value={this.getProp('courseId')}
           onChange={this.handleFieldChange('courseId')}
         />
-      </div>
+      </span>
   );
   }
 }

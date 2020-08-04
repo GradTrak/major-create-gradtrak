@@ -25,13 +25,14 @@ class MultiRequirement extends React.Component {
   render() {
     console.log(this.props);
     return (
-      <div>
+      <span>
         <label for="numRequired">numRequired: </label>
         <input
           name="numRequired"
           type="number"
           value={this.getProp('numRequired')}
           onChange={this.handleFieldChange('numRequired')}
+          class='num'
         />
         <label for="hidden">Hidden: </label>
         <input
@@ -46,7 +47,7 @@ class MultiRequirement extends React.Component {
           onChange={this.handleFieldChange('requirements')}
           parent={this.props.parent}
         />
-      </div>
+      </span>
   );
   }
 }

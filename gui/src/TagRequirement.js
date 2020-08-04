@@ -23,7 +23,7 @@ class TagRequirement extends React.Component {
   }
   render() {
     return (
-      <div>
+      <span>
         <label for="tagId">Tag Id: </label>
         <input
           name="tagId"
@@ -31,7 +31,7 @@ class TagRequirement extends React.Component {
           value={this.getProp('tagId')}
           onChange={this.handleFieldChange('tagId')}
         />
-      </div>
+      </span>
   );
   }
 }
