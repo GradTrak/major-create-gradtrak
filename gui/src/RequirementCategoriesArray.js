@@ -25,7 +25,6 @@ class RequirementCategoriesArray extends React.Component {
     this.props.onChange({target:{value:data}});
   }
   render() {
-    console.log(this.props.parent);
     return (
       <div>
         <button
