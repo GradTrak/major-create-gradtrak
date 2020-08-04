@@ -69,8 +69,8 @@ class Requirement extends React.Component {
     };
     return (
       <div className="block-example">
-        <div>
-        <p className="breadcrumb">{this.props.parent.map((thingy) => (thingy+" - > "))}</p>
+        <span>
+        <span className="breadcrumb">{this.props.parent.map((thingy) => (thingy.substring(0,5) + "/"))}</span>
           <label for="type">type: </label>
           <select
             name="type"
@@ -82,7 +82,6 @@ class Requirement extends React.Component {
           <option value="poly">poly</option>
           <option value="tag">tag</option>
           </select>
-        </div>
           <label for="name">Requirement Name: </label>
           <input
             name="name"
@@ -91,6 +90,7 @@ class Requirement extends React.Component {
             onChange={this.handleFieldChange('name')}
           />
           {requirementComponent}
+          </span>
         </div>
       )
   }

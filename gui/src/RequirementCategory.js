@@ -16,8 +16,7 @@ class RequirementCategory extends React.Component {
       <div>
         <Row>
           <Col>
-            <p className="breadcrumb"> {this.props.parent} </p>
-            <label for="name">Requirement Category Name: </label>
+            <label for="name"><span className="breadcrumb"> {this.props.parent[0].slice(0,5)} </span>Requirement Category Name: </label>
             <input
               name="name"
               type="text"

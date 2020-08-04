@@ -10,10 +10,10 @@ class RequirementSet extends React.Component {
     this.state = {
       data: {
         id: '',
-        name: '',
+        name: 'reqSetName',
         parentId: '',
         type: 'major',
-        requirementCategories: [{name:'reqCatName', requirements: []}]
+        requirementCategories: [{name:'reqCatName', requirements: [{type:'course'}]}]
       },
     };
   }
