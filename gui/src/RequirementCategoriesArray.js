@@ -41,6 +41,7 @@ class RequirementCategoriesArray extends React.Component {
                   value= {req}
                   onChange={this.handleFieldChange(index)}
                   parent={this.props.parent}
+                  reqSetId={this.props.reqSetId}
                   />
                 </Col>
               </Row>

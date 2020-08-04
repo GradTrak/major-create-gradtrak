@@ -91,6 +91,7 @@ class RequirementSet extends React.Component {
               value={this.state.data.requirementCategories}
               onChange={this.changeReqCategories}
               parent={[this.state.data.name]}
+              reqSetId={this.state.data.id}
             />
             <button onClick={this.showResult}>Done</button>
             <ResultDisplay output={this.state.outputData}/>

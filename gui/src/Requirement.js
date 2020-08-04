@@ -15,9 +15,9 @@ class Requirement extends React.Component {
     let data = {...this.props.value};
     data[field] = event.target.value;
     if (data.type === 'multi') {
-      data.id = data.name?('multi'+ data.name).replace(/\W/g, '').toLowerCase():''; //TODO add the requirementSet name
+      data.id = data.name?((this.props.reqSetId || '') + 'multi'+ data.name).replace(/\W/g, '').toLowerCase():''; //TODO add the requirementSet name
     } else if (data.type === 'poly') {
-      data.id = data.name?('poly'+ data.name).replace(/\W/g, '').toLowerCase():'';//TODO add the requirementSet name
+      data.id = data.name?((this.props.reqSetId || '') + 'poly'+ data.name).replace(/\W/g, '').toLowerCase():'';//TODO add the requirementSet name
     }
     this.props.onChange({target:{value: data}});
   }

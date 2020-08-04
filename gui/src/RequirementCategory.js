@@ -27,6 +27,7 @@ class RequirementCategory extends React.Component {
               value={this.props.value.requirements}
               onChange={this.handleFieldChange('requirements')}
               parent={[...this.props.parent, this.props.value.name]}
+              reqSetId={this.props.reqSetId}
             />
           </Col>
         </Row>

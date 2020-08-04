@@ -36,7 +36,12 @@ class RequirementsArray extends React.Component {
         {this.props.value.map((req, index) => {
           return (
             <span key={index}>
-              <Requirement value={req} onChange={this.handleFieldChange(index)} parent={this.props.parent}/>
+              <Requirement
+                value={req}
+                onChange={this.handleFieldChange(index)}
+                parent={this.props.parent}
+                reqSetId={this.props.reqSetId}
+              />
               <button onClick={this.delReq(index)}>Delete req {req.name}</button>
               <br/>
             </span>
