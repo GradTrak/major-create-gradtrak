@@ -14,12 +14,15 @@ class Requirement extends React.Component {
   handleFieldChange = (field) => (event) => {
     let data = {...this.props.value};
     data[field] = event.target.value;
-        console.log(data);
+    if (data.type === 'multi') {
+      data.id = data.name?'multi'+data.name:''; //TODO add the requirementSet name
+    } else if (data.type === 'poly') {
+      data.id = data.name?'poly'+data.name:'';//TODO add the requirementSet name
+    }
     this.props.onChange({target:{value: data}});
   }
   updateRequirement = (event) => {
     let data = {...event.target.value};
-    console.log(data);
     this.props.onChange({target:{value: data}})
   }
   getProp = (field) => {

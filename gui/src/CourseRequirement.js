@@ -7,6 +7,9 @@ class CourseRequirement extends React.Component {
   handleFieldChange = (field) => (event) => {
     let data = {...this.props.value};
     data[field] = event.target.value;
+    if (field === 'courseId') {
+      data.id = data[field];
+    }
     this.props.onChange({target:{value: data}});
   }
   getProp = (field) => {
@@ -14,7 +17,6 @@ class CourseRequirement extends React.Component {
     {
       type: 'course',
       name: '',
-      id: '',
       courseId: ''
     }[field]
   }
