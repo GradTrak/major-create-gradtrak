@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import { Form } from 'react-bootstrap';
+import CourseRequirement from './CourseRequirement';
+import TagRequirement from './TagRequirement';
+import MultiRequirement from './MultiRequirement';
+import PolyRequirement from './PolyRequirement';
 class Requirement extends React.Component {
   constructor(props) {
     super(props);
@@ -13,6 +17,13 @@ class Requirement extends React.Component {
   updateRequirement = (event) => {
     let data = {...event.target.value};
     this.props.onChange({target:{value: data}})
+  }
+  getProp = (field) => {
+    return this.props.value[field] ||
+    {
+      type: 'course',
+      name: '',
+    }[field]
   }
   render() {
     let requirementComponent;
@@ -73,7 +84,6 @@ class Requirement extends React.Component {
           {requirementComponent}
         </div>
       )
-    );
   }
 }
 
