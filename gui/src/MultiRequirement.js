@@ -7,6 +7,11 @@ class MultiRequirement extends React.Component {
     this.handleFieldChange = this.handleFieldChange.bind(this);
   }
   handleFieldChange = (field) => (event) => {
+    if (field === "hidden") {
+      let data = {...this.props.value};
+      data[field] = event.target.checked;
+      return this.props.onChange({target:{value: data}});
+    }
     let data = {...this.props.value};
     data[field] = event.target.value;
     this.props.onChange({target:{value: data}});
@@ -23,7 +28,6 @@ class MultiRequirement extends React.Component {
     }[field]
   }
   render() {
-    console.log(this.props);
     return (
       <span>
         <label for="numRequired">numRequired: </label>
@@ -32,7 +36,7 @@ class MultiRequirement extends React.Component {
           type="number"
           value={this.getProp('numRequired')}
           onChange={this.handleFieldChange('numRequired')}
-          class='num'
+          id='num'
         />
         <label for="hidden">Hidden: </label>
         <input

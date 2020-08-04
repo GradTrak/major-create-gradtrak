@@ -15,9 +15,9 @@ class Requirement extends React.Component {
     let data = {...this.props.value};
     data[field] = event.target.value;
     if (data.type === 'multi') {
-      data.id = data.name?'multi'+data.name:''; //TODO add the requirementSet name
+      data.id = data.name?('multi'+ data.name).replace(/\W/g, '').toLowerCase():''; //TODO add the requirementSet name
     } else if (data.type === 'poly') {
-      data.id = data.name?'poly'+data.name:'';//TODO add the requirementSet name
+      data.id = data.name?('poly'+ data.name).replace(/\W/g, '').toLowerCase():'';//TODO add the requirementSet name
     }
     this.props.onChange({target:{value: data}});
   }
@@ -82,7 +82,7 @@ class Requirement extends React.Component {
           <option value="poly">poly</option>
           <option value="tag">tag</option>
           </select>
-          <label for="name">Requirement Name: </label>
+          <label for="name">req name: </label>
           <input
             name="name"
             type="text"
