@@ -25,6 +25,7 @@ class RequirementCategoriesArray extends React.Component {
     this.props.onChange({target:{value:data}});
   }
   render() {
+    console.log(this.props.parent);
     return (
       <div>
         <button
@@ -39,6 +40,7 @@ class RequirementCategoriesArray extends React.Component {
                   <RequirementCategory
                   value= {req}
                   onChange={this.handleFieldChange(index)}
+                  parent={this.props.parent}
                   />
                 </Col>
               </Row>

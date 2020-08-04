@@ -16,6 +16,7 @@ class RequirementCategory extends React.Component {
       <div>
         <Row>
           <Col>
+            <p> {this.props.parent} </p>
             <label for="name">Requirement Category Name: </label>
             <input
               name="name"
