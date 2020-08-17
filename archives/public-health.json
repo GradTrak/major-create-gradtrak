@@ -1,0 +1,258 @@
+{
+  "id": "publichealth",
+  "name": "Public Health",
+  "parentId": "ls",
+  "type": "major",
+  "requirementCategories": [
+    {
+      "name": "Lower Division Requirements",
+      "requirements": [
+        {
+          "name": "Biological Sciences",
+          "type": "unit",
+          "id": "publichealthunitbiologicalsciences",
+          "units": 7,
+          "requirement": {
+            "name": "Biological Sciences",
+            "type": "multi",
+            "id": "multibiologicalsciences",
+            "numRequired": 1,
+            "hidden": true,
+            "requirements": [
+              {
+                "name": "Biology 1A",
+                "type": "course",
+                "courseId": "biology1a",
+                "id": "biology1a"
+              },
+              {
+                "name": "Biology 1B",
+                "type": "course",
+                "courseId": "biology1b",
+                "id": "biology1b"
+              },
+              {
+                "name": "MCB 32",
+                "type": "course",
+                "courseId": "mcellbi32",
+                "id": "mcellbi32"
+              },
+              {
+                "name": "MCB 50",
+                "type": "course",
+                "courseId": "mcellbi50",
+                "id": "mcellbi50"
+              },
+              {
+                "name": "MCB 55",
+                "type": "course",
+                "courseId": "mcellbi55",
+                "id": "mcellbi55"
+              },
+              {
+                "name": "MCB C61",
+                "type": "course",
+                "courseId": "mcbc61",
+                "id": "mcbc61"
+              },
+              {
+                "name": "Nutrisci 10",
+                "type": "course",
+                "courseId": "NUSCTX10",
+                "id": "NUSCTX10"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Data 8",
+          "type": "course",
+          "courseId": "datac8",
+          "id": "datac8"
+        },
+        {
+          "name": "Mathematics",
+          "type": "multi",
+          "id": "publichealthmultimathematics",
+          "numRequired": 2,
+          "requirements": [
+            {
+              "name": "Math 1A",
+              "type": "course",
+              "courseId": "math1a",
+              "id": "math1a"
+            },
+            {
+              "name": "Math 1B",
+              "type": "course",
+              "courseId": "math1b",
+              "id": "math1b"
+            },
+            {
+              "name": "Math 10A",
+              "type": "course",
+              "courseId": "math10a",
+              "id": "math10a"
+            },
+            {
+              "name": "Math 10B",
+              "type": "course",
+              "courseId": "math10b",
+              "id": "math10b"
+            },
+            {
+              "name": "Math 16A",
+              "type": "course",
+              "courseId": "math16a",
+              "id": "math16a"
+            },
+            {
+              "name": "Math 16b",
+              "type": "course",
+              "courseId": "math16b",
+              "id": "math16b"
+            },
+            {
+              "name": "Math 32",
+              "type": "course",
+              "courseId": "math32",
+              "id": "math32"
+            }
+          ]
+        },
+        {
+          "name": "Social Science",
+          "type": "multi",
+          "id": "publichealthmultisocialscience",
+          "numRequired": 3,
+          "requirements": [
+            {
+              "name": "Anthro 3",
+              "type": "course",
+              "courseId": "anthro3",
+              "id": "anthro3"
+            },
+            {
+              "name": "Econ 1",
+              "type": "course",
+              "courseId": "econ1",
+              "id": "econ1"
+            },
+            {
+              "name": "Econ 2",
+              "type": "course",
+              "courseId": "econ2",
+              "id": "econ2"
+            },
+            {
+              "name": "Econ 3",
+              "type": "course",
+              "courseId": "econ3",
+              "id": "econ3"
+            },
+            {
+              "name": "Polisci 2",
+              "type": "course",
+              "courseId": "polsci2",
+              "id": "polsci2"
+            },
+            {
+              "name": "Polisci 4",
+              "type": "course",
+              "courseId": "polsci4",
+              "id": "polsci4"
+            },
+            {
+              "name": "Psych 1",
+              "type": "course",
+              "courseId": "psych1",
+              "id": "psych1"
+            },
+            {
+              "name": "Psych 2",
+              "type": "course",
+              "courseId": "psych2",
+              "id": "psych2"
+            },
+            {
+              "name": "Sociol 1",
+              "type": "course",
+              "courseId": "sociol1",
+              "id": "sociol1"
+            },
+            {
+              "name": "Sociol 3AC",
+              "type": "course",
+              "courseId": "sociol3ac",
+              "id": "sociol3ac"
+            },
+            {
+              "name": "Sociol 5",
+              "type": "course",
+              "courseId": "sociol5",
+              "id": "sociol5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Upper Division Requirements",
+      "requirements": [
+        {
+          "name": "PB HLTH 142",
+          "type": "course",
+          "courseId": "pbhlth142",
+          "id": "pbhlth142"
+        },
+        {
+          "name": "PB HLTH 150A",
+          "type": "course",
+          "courseId": "pbhlth150a",
+          "id": "pbhlth150a"
+        },
+        {
+          "name": "PB HLTH 150B",
+          "type": "course",
+          "courseId": "pbhlth150b",
+          "id": "pbhlth150b"
+        },
+        {
+          "name": "PB HLTH 150D",
+          "type": "course",
+          "courseId": "pbhlth150d",
+          "id": "pbhlth150d"
+        },
+        {
+          "name": "PB HLTH 150E",
+          "type": "course",
+          "courseId": "pbhlth150e",
+          "id": "pbhlth150e"
+        },
+        {
+          "name": "Capstone Requirement",
+          "type": "tag",
+          "tagId": "pb_hlth_capstone",
+          "id": "pb_hlth_capstone"
+        }
+      ]
+    },
+    {
+      "name": "Elective Requirements",
+      "requirements": [
+        {
+          "name": "Electives",
+          "type": "unit",
+          "id": "publichealthunitelectives",
+          "units": 10,
+          "requirement": {
+            "name": "Public Health Elective",
+            "type": "tag",
+            "tagId": "pb_hlth_elective",
+            "id": "pb_hlth_elective"
+          }
+        }
+      ]
+    }
+  ]
+}
