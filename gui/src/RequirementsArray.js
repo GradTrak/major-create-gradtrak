@@ -34,6 +34,7 @@ class RequirementsArray extends React.Component {
         <button onClick={this.addReq}>Add req</button>
         <div>
         {this.props.value.map((req, index) => {
+          console.log(this.props.parent)
           return (
             <span key={index}>
               <Requirement

@@ -4,6 +4,8 @@ import CourseRequirement from './CourseRequirement';
 import TagRequirement from './TagRequirement';
 import MultiRequirement from './MultiRequirement';
 import PolyRequirement from './PolyRequirement';
+import UnitRequirement from './UnitRequirement';
+import CountRequirement from './CountRequirement';
 import './Requirement.css';
 
 class Requirement extends React.Component {
@@ -53,17 +55,37 @@ class Requirement extends React.Component {
         requirementComponent = <PolyRequirement
         value= {req}
         onChange={this.updateRequirement}
+        parent= {[...this.props.parent, this.getProp('name')]}
+      />
+        break;
+      case 'unit':
+        requirementComponent = <UnitRequirement
+        value= {req}
+        onChange={this.updateRequirement}
+        parent= {[...this.props.parent, this.getProp('name')]}
+      />
+        break;
+      case 'count':
+        requirementComponent = <CountRequirement
+        value= {req}
+        onChange={this.updateRequirement}
+        parent= {[...this.props.parent, this.getProp('name')]}
       />
         break;
       case 'tag':
         requirementComponent = <TagRequirement
         value= {req}
         onChange={this.updateRequirement}
+        parent= {[...this.props.parent, this.getProp('name')]}
       />
         break;
       default:
+        alert(`Error: unknown requirement type: ${req.type}. context: ${this.props.parent}`)
         requirementComponent = <Requirement
-        value= {req}
+        value= {{
+          ...req,
+          type: 'course'
+          }}
         onChange={this.updateRequirement}
         />
     };
@@ -81,6 +103,8 @@ class Requirement extends React.Component {
           <option value="multi">multi</option>
           <option value="poly">poly</option>
           <option value="tag">tag</option>
+          <option value="unit">unit</option>
+          <option value="count">count</option>
           </select>
           <label for="name">req name: </label>
           <input
