@@ -16,10 +16,15 @@ class Requirement extends React.Component {
   handleFieldChange = (field) => (event) => {
     let data = {...this.props.value};
     data[field] = event.target.value;
+    alert(this.props.reqSetId);
     if (data.type === 'multi') {
-      data.id = data.name?((this.props.reqSetId || '') + 'multi'+ data.name).replace(/\W/g, '').toLowerCase():''; //TODO add the requirementSet name
+      data.id = data.name?((this.props.reqSetId || '') + 'multi'+ data.name).replace(/\W/g, '').toLowerCase():'';
     } else if (data.type === 'poly') {
-      data.id = data.name?((this.props.reqSetId || '') + 'poly'+ data.name).replace(/\W/g, '').toLowerCase():'';//TODO add the requirementSet name
+      data.id = data.name?((this.props.reqSetId || '') + 'poly'+ data.name).replace(/\W/g, '').toLowerCase():'';
+    } else if (data.type === 'unit') {
+      data.id = data.name?((this.props.reqSetId || '') + 'unit'+ data.name).replace(/\W/g, '').toLowerCase():'';
+    } else if (data.type === 'count') {
+      data.id = data.name?((this.props.reqSetId || '') + 'count'+ data.name).replace(/\W/g, '').toLowerCase():'';
     }
     this.props.onChange({target:{value: data}});
   }
@@ -92,7 +97,7 @@ class Requirement extends React.Component {
     return (
       <span className="block-example">
         <span>
-        <span className="breadcrumb">{this.props.parent.map((thingy) => (thingy.substring(0,5) + "/"))}</span>
+        <span className="breadcrumb">{this.props.parent.map((thingy) => (thingy.substring(0,9) + "/"))}</span>
           <label for="type">type: </label>
           <select
             name="type"

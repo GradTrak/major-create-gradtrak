@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Form } from 'react-bootstrap';
 import RequirementsArray from './RequirementsArray';
-import Requirement from './Requirement'
+
 class PolyRequirement extends React.Component {
   constructor(props) {
     super(props);
@@ -27,9 +27,7 @@ class PolyRequirement extends React.Component {
       name: '',
       id: '',
       numRequired: 1,
-      requirement: {
-        type: 'course',
-      },
+      requirements: [],
       hidden: false
     }[field]
   }
@@ -43,10 +41,10 @@ class PolyRequirement extends React.Component {
           value={this.getProp('hidden')}
           onChange={this.handleFieldChange('hidden')}
         />
-        <label for="Requirement">Requirement: </label>
-        <Requirement
-          value={this.getProp('requirement')}
-          onChange={this.handleFieldChange('requirement')}
+        <label for="Requirements">Requirements: </label>
+        <RequirementsArray
+          value={this.getProp('requirements')}
+          onChange={this.handleFieldChange('requirements')}
           parent={this.props.parent}
         />
       </span>
