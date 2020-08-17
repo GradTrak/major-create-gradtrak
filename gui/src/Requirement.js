@@ -15,8 +15,12 @@ class Requirement extends React.Component {
   }
   handleFieldChange = (field) => (event) => {
     let data = {...this.props.value};
+    if (event.target.name === 'type') {
+      data = {
+        name: data.name,
+      }
+    }
     data[field] = event.target.value;
-    alert(this.props.reqSetId);
     if (data.type === 'multi') {
       data.id = data.name?((this.props.reqSetId || '') + 'multi'+ data.name).replace(/\W/g, '').toLowerCase():'';
     } else if (data.type === 'poly') {
