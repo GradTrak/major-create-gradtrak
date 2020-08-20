@@ -34,6 +34,14 @@ class PolyRequirement extends React.Component {
   render() {
     return (
       <span>
+        <label for="numRequired">numRequired: </label>
+        <input
+          name="numRequired"
+          type="number"
+          value={this.getProp('numRequired')}
+          onChange={this.handleFieldChange('numRequired')}
+          id='num'
+        />
         <label for="hidden">Hidden: </label>
         <input
           name="hidden"
