@@ -29,6 +29,10 @@ class Requirement extends React.Component {
       data.id = data.name?((this.props.reqSetId || '') + 'unit'+ data.name).replace(/\W/g, '').toLowerCase():'';
     } else if (data.type === 'count') {
       data.id = data.name?((this.props.reqSetId || '') + 'count'+ data.name).replace(/\W/g, '').toLowerCase():'';
+    } else if (data.type === 'course') {
+      if (field === 'name') {
+        data.courseId = event.target.value.toLowerCase().replace(/\W/g, '');
+      }
     }
     this.props.onChange({target:{value: data}});
   }
