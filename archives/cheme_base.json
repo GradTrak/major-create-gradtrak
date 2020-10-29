@@ -1,0 +1,171 @@
+{
+  "id": "cheme_base",
+  "name": "Chemical Engineering",
+  "parentId": "ucb",
+  "type": "unselectable",
+  "requirementCategories": [
+    {
+      "name": "Lower Division",
+      "requirements": [
+        {
+          "name": "CHEM 4A",
+          "type": "course",
+          "courseId": "chem4a"
+        },
+        {
+          "name": "CHEM 4B",
+          "type": "course",
+          "courseId": "chem4b"
+        },
+        {
+          "name": "CHM ENG 12A",
+          "type": "course",
+          "courseId": "chmeng12a"
+        },
+        {
+          "name": "CHM ENG 40",
+          "type": "course",
+          "courseId": "chmeng40"
+        },
+        {
+          "name": "ENGIN 7",
+          "type": "course",
+          "courseId": "engin7"
+        },
+        {
+          "name": "MATH 1A",
+          "type": "course",
+          "courseId": "math1a"
+        },
+        {
+          "name": "MATH1B",
+          "type": "course",
+          "courseId": "math1b"
+        },
+        {
+          "name": "MATH53",
+          "type": "course",
+          "courseId": "math53"
+        },
+        {
+          "name": "MATH54",
+          "type": "course",
+          "courseId": "math54"
+        },
+        {
+          "name": "PHYSICS 7A",
+          "type": "course",
+          "courseId": "physics7a"
+        },
+        {
+          "name": "PHYSICS 7B",
+          "type": "course",
+          "courseId": "physics7b"
+        },
+        {
+          "name": "Biology",
+          "type": "multi",
+          "id": "cheme_basemultibiology",
+          "numRequired": 1,
+          "requirements": [
+            {
+              "name": "BIOLOGY 1A",
+              "type": "course",
+              "courseId": "biology1a"
+            },
+            {
+              "name": "BIO ENG 11",
+              "type": "course",
+              "courseId": "bioeng11"
+            }
+          ]
+        },
+        {
+          "name": "MAT SCI 45",
+          "type": "course",
+          "courseId": "matsci45"
+        },
+        {
+          "name": "MAT SCI 45L",
+          "type": "course",
+          "courseId": "matsci45l"
+        }
+      ]
+    },
+    {
+      "name": "Upper Division",
+      "requirements": [
+        {
+          "name": "CHEM 120A/PHYSICS 137A",
+          "type": "multi",
+          "id": "cheme_basemultichem120aphysics137a",
+          "numRequired": 1,
+          "requirements": [
+            {
+              "name": "CHEM 120A",
+              "type": "course",
+              "courseId": "chem120a"
+            },
+            {
+              "name": "PHYSICS 137A",
+              "type": "course",
+              "courseId": "physics137a"
+            }
+          ]
+        },
+        {
+          "name": "CHM ENG 140",
+          "type": "course",
+          "courseId": "chmeng140"
+        },
+        {
+          "name": "CHM ENG 141",
+          "type": "course",
+          "courseId": "chmeng141"
+        },
+        {
+          "name": "CHM ENG 142",
+          "type": "course",
+          "courseId": "chmeng142"
+        },
+        {
+          "name": "CHM ENG 150A",
+          "type": "course",
+          "courseId": "chmeng150a"
+        },
+        {
+          "name": "CHM ENG 150B",
+          "type": "course",
+          "courseId": "chmeng150b"
+        },
+        {
+          "name": "CHM ENG 154",
+          "type": "course",
+          "courseId": "chmeng154"
+        },
+        {
+          "name": "CHM ENG 160",
+          "type": "course",
+          "courseId": "chmeng160"
+        },
+        {
+          "name": "CHM ENG 162",
+          "type": "course",
+          "courseId": "chmeng162"
+        },
+        {
+          "name": "Engineering Elective",
+          "type": "unit",
+          "id": "cheme_baseunitengineeringelective",
+          "units": 3,
+          "requirement": {
+            "name": "Engineering Elective",
+            "type": "tag",
+            "tagId": "cheme_engineering_elective",
+            "id": "cheme_engineering_elective"
+          }
+        }
+      ]
+    }
+  ]
+}
