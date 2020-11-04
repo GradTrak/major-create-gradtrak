@@ -1,0 +1,168 @@
+{
+  "id": "philosophy",
+  "name": "Philosophy Major",
+  "parentId": "ls",
+  "type": "major",
+  "requirementCategories": [
+    {
+      "name": "Lower Division",
+      "requirements": [
+        {
+          "name": "PHILOS 12A",
+          "type": "course",
+          "courseId": "philos12a"
+        },
+        {
+          "name": "PHILOS 25A",
+          "type": "course",
+          "courseId": "philos25a"
+        },
+        {
+          "name": "PHILOS 25B",
+          "type": "course",
+          "courseId": "philos25b"
+        }
+      ]
+    },
+    {
+      "name": "Upper Division",
+      "requirements": [
+        {
+          "name": "PHILOS 100",
+          "type": "course",
+          "courseId": "philos100"
+        },
+        {
+          "name": "Ethics",
+          "type": "multi",
+          "id": "philosophymultiethics",
+          "numRequired": 1,
+          "requirements": [
+            {
+              "name": "PHILOS 104",
+              "type": "course",
+              "courseId": "philos104"
+            },
+            {
+              "name": "PHILOS 107",
+              "type": "course",
+              "courseId": "philos107"
+            },
+            {
+              "name": "PHILOS 108",
+              "type": "course",
+              "courseId": "philos108"
+            },
+            {
+              "name": "PHILOS 114",
+              "type": "course",
+              "courseId": "philos114"
+            },
+            {
+              "name": "PHILOS 115",
+              "type": "course",
+              "courseId": "philos115"
+            }
+          ]
+        },
+        {
+          "name": "PHILOS 160-178",
+          "type": "course",
+          "courseId": "TODO:regex",
+          "id": "TODO:regex"
+        },
+        {
+          "name": "History Course",
+          "type": "tag",
+          "tagId": "philos_hist",
+          "id": "philos_hist"
+        },
+        {
+          "name": "Epistemology/Metaphysics",
+          "type": "multi",
+          "id": "philosophymultiepistemologymetaphysics",
+          "numRequired": 2,
+          "requirements": [
+            {
+              "name": "PHILOS 122",
+              "type": "course",
+              "courseId": "philos122"
+            },
+            {
+              "name": "PHILOS 125",
+              "type": "course",
+              "courseId": "philos125"
+            },
+            {
+              "name": "Group C",
+              "type": "multi",
+              "id": "multigroupc",
+              "numRequired": 1,
+              "requirements": [
+                {
+                  "name": "PHILOS 132",
+                  "type": "course",
+                  "courseId": "philos132"
+                },
+                {
+                  "name": "PHILOS 136",
+                  "type": "course",
+                  "courseId": "philos136"
+                }
+              ]
+            },
+            {
+              "name": "Group D",
+              "type": "multi",
+              "id": "multigroupd",
+              "numRequired": 1,
+              "requirements": [
+                {
+                  "name": "PHILOS 133",
+                  "type": "course",
+                  "courseId": "philos133"
+                },
+                {
+                  "name": "PHILOS 134",
+                  "type": "course",
+                  "courseId": "philos134"
+                },
+                {
+                  "name": "PHILOS 135",
+                  "type": "course",
+                  "courseId": "philos135"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Electives",
+          "type": "multi",
+          "id": "philosophymultielectives",
+          "numRequired": 2,
+          "requirements": [
+            {
+              "name": "any philos course",
+              "type": "course",
+              "courseId": "regex",
+              "id": "regex"
+            },
+            {
+              "name": "Upper division elective",
+              "type": "count",
+              "id": "countupperdivisionelective",
+              "numRequired": 2,
+              "requirement": {
+                "name": "upper div philos elective",
+                "type": "course",
+                "courseId": "TODO:REGEX",
+                "id": "TODO:REGEX"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
