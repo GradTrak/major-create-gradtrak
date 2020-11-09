@@ -17,6 +17,7 @@ class CourseRequirement extends React.Component {
     {
       type: 'course',
       name: '',
+      id: '',
       courseId: ''
     }[field]
   }
